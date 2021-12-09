@@ -124,8 +124,10 @@ module.exports = {
                 const selectMenu = new MessageActionRow()
                     .addComponents(
                         new MessageSelectMenu()
-                            .setCustomId('gen')
+                            .setCustomId('StarterGen')
                             .setPlaceholder('Select the generation of your starter pokemon!')
+                            .setMinValues(1)
+                            .setMaxValues(1)
                             .addOptions([
                                 {
                                     label: 'Gen 1',
@@ -139,7 +141,27 @@ module.exports = {
                                     label: 'Gen 3',
                                     description: 'Choose from Gen 3 Starters!',
                                     value: 'gen3'
-                                }                             
+                                }, {
+                                    label: 'Gen 4',
+                                    description: 'Choose from Gen 4 Starters!',
+                                    value: 'gen4'
+                                }, {
+                                    label: 'Gen 5',
+                                    description: 'Choose from Gen 5 Starters!',
+                                    value: 'gen5'
+                                }, {
+                                    label: 'Gen 6',
+                                    description: 'Choose from Gen 6 Starters!',
+                                    value: 'gen6'
+                                }, {
+                                    label: 'Gen 7',
+                                    description: 'Choose from Gen 7 Starters!',
+                                    value: 'gen7'
+                                }, {
+                                    label: 'Gen 8',
+                                    description: 'Choose from Gen 8 Starters!',
+                                    value: 'gen8'
+                                }    
                             ])
                     )
 
