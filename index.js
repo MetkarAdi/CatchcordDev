@@ -48,7 +48,18 @@ for (const file of gettingStarted) {
     client.commands.set(command.data.name, command)
     commandsArray.push(command.data.toJSON())
 }
-
+const spawns = fs.readdirSync('./commands/2_Spawns').filter(file => file.endsWith('.js'))
+for (const file of spawns) {
+    const command = require(`./commands/2_Spawns/${file}`)
+    client.commands.set(command.data.name, command)
+    commandsArray.push(command.data.toJSON())
+}
+const pokemonCommands = fs.readdirSync('./commands/4_PokemonCommands').filter(file => file.endsWith('.js'))
+for (const file of pokemonCommands) {
+    const command = require(`./commands/4_PokemonCommands/${file}`)
+    client.commands.set(command.data.name, command)
+    commandsArray.push(command.data.toJSON())
+}
 const selectMenus = fs.readdirSync('./commands/SelectMenus').filter(file => file.endsWith('.js'))
 for (const file of selectMenus) {
     const command = require(`./commands/SelectMenus/${file}`)

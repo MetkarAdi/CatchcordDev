@@ -37,7 +37,7 @@ const {
 
 module.exports = {
     name: 'StarterGen',
-    desctiption: 'Dropdown to select generation of Started pokemon',
+    description: 'Dropdown to select generation of Started pokemon',
     async execute(client, interaction) {
         if (interaction.isSelectMenu()) {
             const selectedGen = interaction.values[0]
